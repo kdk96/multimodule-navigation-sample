@@ -1,0 +1,23 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    compileSdk 32
+
+    defaultConfig {
+        minSdk 21
+    }
+}
+
+dependencies {
+    implementation("com.github.terrakok:cicerone:7.1")
+
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+
+    implementation(project(':feature-a:contract'))
+    implementation(project(':feature-b:contract'))
+    implementation(project(':navigation'))
+}
